@@ -1,7 +1,6 @@
 version: '3.8'
 services:
     oracle-server-db:
-      container_name: oracle-server-db
       image: gvenzl/oracle-xe
     deploy:
       replicas: 2
@@ -10,6 +9,6 @@ services:
       ports:
         - "1521:1521"
         - "1522:1522"
-      environment:
+      enviroment:
         ORACLE_PASSWORD: "123"
     
